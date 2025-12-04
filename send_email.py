@@ -5,7 +5,7 @@ from email.message import EmailMessage
 def send_email():
     email_address = os.environ.get('GMAIL_USERNAME')
     email_password = os.environ.get('GMAIL_PASSWORD')
-    recipient = "recipient@example.com"
+    recipient = os.environ.get('RECIPIENT_1')
 
     msg = EmailMessage()
     msg['Subject'] = "Automated Report from GitHub"
