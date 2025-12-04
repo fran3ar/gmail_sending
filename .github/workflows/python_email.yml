@@ -17,4 +17,5 @@ jobs:
         env:
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          RECIPIENT_1: ${{ secrets.RECIPIENT_1 }}
         run: python send_email.py
