@@ -1,6 +1,12 @@
 name: Send Email via Python
 
-on: [workflow_dispatch]
+on:
+  # Allows you to run this manually
+  workflow_dispatch:
+  # Runs automatically 3 times a day
+  schedule:
+    # This example runs at 08:00, 14:00, and 20:00 UTC
+    - cron: '0 8,14,20 * * *'
 
 jobs:
   run-script:
